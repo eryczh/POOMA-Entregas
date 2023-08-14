@@ -1,6 +1,6 @@
 # SENAC-POOMA-1142567657-eric
 
-Entrega de atividades da disciplina de Poo-2023/3
+Entrega de atividades da disciplina de POO - 2023/3
 
 Nome Do Proprietário: Eric Paixão Andrade
 
