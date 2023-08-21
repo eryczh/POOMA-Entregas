@@ -1,0 +1,54 @@
+    A partir das necessidades de negócio apresentadas no cenário de um sistema de
+gerenciamento de sessões e vendas de ingressos online para uma sala de cinema,
+podemos identificar várias classes com suas características e comportamentos correspondentes.
+Aqui está uma lista de classes possíveis para esse cenário:
+
+    * Cinema:
+
+    Atributos: nome, endereço, contato
+    Métodos: adicionarSessao(sessao), listarSessoes(), pesquisarFilmePorTitulo(titulo)
+
+    * Sessao:
+
+    Atributos: data, horarioInicio, duracao, tituloFilme, classificacaoIndicativa, genero, assentosDisponiveis, precoBase
+    Métodos: reservarAssento(cliente, assento), liberarAssento(assento), calcularPrecoTotal(cliente)
+
+    * Cliente:
+
+    Atributos: nome, idade, tipoCliente (estudante, idoso, criança, regular)
+    Métodos: fazerPagamento(valor), reservarAssento(sessao, assento)
+
+    * Assento:
+
+    Atributos: numero, fila, status (disponível, ocupado, reservado), tipo (normal, VIP)
+    Métodos: reservar(cliente), liberar(), verificarDisponibilidade()
+
+    * Pagamento:
+
+    Atributos: valor, métodoPagamento, informações de pagamento
+    Métodos: processarPagamento()
+    
+    * Filme:
+
+    Atributos: titulo, elenco, tipoFilme, duracao, lancamento
+    Métodos: consultarFilmePorTitulo(titulo), consultarFilmePorElenco(elenco), listarFilmes()
+
+    * MapaSalaCinema:
+
+    Atributos: matrizAssentos (representando a disposição dos assentos na sala)
+    Métodos: marcarAssentoOcupado(fila, numeroAssento), marcarAssentoReservado(fila, numeroAssento), exibirMapa()
+
+    * VendaIngresso:
+
+    Atributos: cliente, sessao, assentosSelecionados, precoTotal
+    Métodos: emitirIngresso(), registrarVenda()
+
+    * GerenciadorVendas:
+
+    Atributos: listaVendas, listaClientes, listaSessoes
+    Métodos: registrarVenda(venda), consultarVendasPorCliente(cliente), consultarVendasPorSessao(sessao)
+    
+    * GerenciadorSessoes:
+
+    Atributos: listaSessoes
+    Métodos: adicionarSessao(sessao), listarSessoes(), pesquisarSessaoPorFilme(tituloFilme), pesquisarSessaoPorHorario(horario)
